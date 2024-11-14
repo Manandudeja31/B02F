@@ -9,7 +9,7 @@ const HeroSection = () => {
       <div className="h-full">
         <Social />
         <Navbar />
-        <div className=" w-full relative m-5 md:m-0 md:mx-0 ">
+        <div className=" w-full relative md:m-0 md:mx-0 ">
           <div
             className="absolute text-left m-2 block md:hidden "
             style={{ fontFamily: "'Cormorant', serif" }}

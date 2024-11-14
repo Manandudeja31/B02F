@@ -17,7 +17,7 @@ const Navbar = () => {
           <NavMenu />
         </div>
 
-        <div className="flex gap-8 justify-end items-center">
+        <div className="flex gap-6 justify-end items-center">
           <button
             className="bg-[#583781] text-white w-24 md:w-36 h-6 md:h-10 
           rounded-[5px] my-6 md:my-6"
