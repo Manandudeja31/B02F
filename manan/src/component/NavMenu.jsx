@@ -5,11 +5,8 @@ const NavMenu = () => {
     <div>
       <div
         className="md:flex items-center justify-center hidden bg-[#F5F5F5] px-[35px] py-[14px]
-       gap-[60px] text-[16px] my-6 font-medium"
-        style={
-          ({ boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.2)" },
-          { fontFamily: "'Cormorant', serif" })
-        }
+       gap-[60px] text-[16px] my-6 font-medium shadow-md"
+        style={{ fontFamily: "'Cormorant', serif" }}
       >
         <a
           href="/"

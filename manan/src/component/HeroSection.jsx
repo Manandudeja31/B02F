@@ -3,6 +3,7 @@ import Social from "./Social";
 import Navbar from "./Navbar";
 import banner from "../assets/image 1.png";
 import "../App.css";
+import Info from "./Info";
 const HeroSection = () => {
   return (
     <div>
@@ -30,10 +31,10 @@ const HeroSection = () => {
           <img
             src={banner}
             alt="HeroImage"
-            className="h-[160px] md:h-[500px] w-full mb-20"
-            style={{ boxShadow: "0px 2px 0px 2px rgba(0, 0, 0, 0.1)" }}
+            className="h-[160px] md:h-[500px] w-full mb-5 shadow-md"
           />
         </div>
+        <Info />
       </div>
     </div>
   );
