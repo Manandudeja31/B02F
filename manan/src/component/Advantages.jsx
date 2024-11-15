@@ -27,11 +27,11 @@ const Advantages = () => {
   ];
 
   return (
-    <div className=" py-12 relative mx-5 ">
-      <h2 className="md:text-5xl font-bold text-[#201041] mb-4">
+    <div className=" md:py-12 relative mx-5 ">
+      <h2 className="text-xl md:text-5xl font-bold text-[#201041] mb-1 md:mb-4">
         Our Assistance's advantages
       </h2>
-      <p className="md:text-2xl font-medium text-gray-600 mb-8">
+      <p className="text-xs md:text-2xl font-medium mb-4 md:mb-8">
         The Assigner wants to build a strong foundation that will enable
         students to soar to achievement.
       </p>
@@ -40,16 +40,16 @@ const Advantages = () => {
         alt="obj1"
         className="absolute right-0 top-[80px] hidden md:block"
       />
-      <div className="grid lg:grid-cols-4 gap-6 md:px-10 md:mx-10">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 px-5 md:px-10 md:mx-10">
         {Advantages.map((Advantage, index) => (
           <div
             key={index}
-            className=" bg-[#EE481447] shadow-md rounded-[20px] p-5 text-center 
-                flex flex-col justify-center items-center w-[250px]
-                 h-[250px] border border-black"
+            className=" bg-[#EE481447] shadow-lg rounded-[20px] p-2 md:p-5 text-center 
+                flex flex-col justify-center items-center w-[150px] md:w-[250px]
+                h-[150px] md:h-[250px] border border-black"
           >
-            <h3 className="text-2xl font-bold">{Advantage.title}</h3>
-            <p className=" text-base font-medium mt-2">
+            <h3 className="text-sm md:text-2xl font-bold">{Advantage.title}</h3>
+            <p className="text-xs md:text-base font-medium mt-2">
               {Advantage.description}
             </p>
           </div>

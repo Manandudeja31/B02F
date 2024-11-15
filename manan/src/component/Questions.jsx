@@ -9,17 +9,21 @@ const Questions = () => {
     setIsOpen((prev) => (prev === id ? null : id));
   };
   return (
-    <div className=" mb-10">
-      <h2 className="text-4xl font-bold text-[#201041] mb-8">FAQs</h2>
+    <div className=" mt-10 md:mt-2 mb-10">
+      <h2 className=" text-lg md:text-4xl font-bold text-[#201041] pb-4 md:mb-8">
+        FAQs
+      </h2>
       <div className="flex justify-center items-center flex-col gap-2 px-10">
         {Question.map((Que, id) => (
           <div
             key={id}
-            className="bg-white md:w-[1050px] shadow-md rounded-lg py-2 cursor-pointer"
+            className="bg-white w-[366px] md:w-[1050px] shadow-lg rounded-lg py-2 cursor-pointer"
             onClick={() => showDescription(id)}
           >
             <div className="flex justify-between items-center px-3">
-              <h3 className="text-xl font-bold">{Que.title}</h3>
+              <h3 className="text-base md:text-xl font-bold text-left">
+                {Que.title}
+              </h3>
               <button
                 className="font-bold text-3xl"
                 onClick={() => showDescription(id)}
@@ -50,7 +54,9 @@ const Questions = () => {
               } `}
               >
                 {isOpen === id && (
-                  <p className="mt-2 font-medium text-lg">{Que.description}</p>
+                  <p className="mt-2 font-medium text-base md:text-lg">
+                    {Que.description}
+                  </p>
                 )}
               </div>
             </div>

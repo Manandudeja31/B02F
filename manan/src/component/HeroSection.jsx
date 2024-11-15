@@ -7,10 +7,10 @@ import Info from "./Info";
 const HeroSection = () => {
   return (
     <div>
-      <div className="h-full">
+      <div className="h-full shadow-lg md:shadow-none">
         <Social />
         <Navbar />
-        <div className=" w-full relative md:m-0 md:mx-0 ">
+        <div className=" w-full relative md:m-0 md:mx-0 z-1">
           <div
             className="absolute text-left m-2 block md:hidden "
             style={{ fontFamily: "'Cormorant', serif" }}

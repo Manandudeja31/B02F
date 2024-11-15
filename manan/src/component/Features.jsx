@@ -29,26 +29,26 @@ const Features = () => {
   ];
 
   return (
-    <div className=" py-12">
-      <h2 className="text-4xl font-bold text-[#201041] mb-4">
+    <div className=" md:py-5">
+      <h2 className="text-2xl md:text-4xl font-bold text-[#201041] mb-1 md:mb-4">
         Awesome Features
       </h2>
-      <p className="text-2xl font-medium mb-8">
+      <p className=" text-base md:text-2xl font-medium mb-2 md:mb-8">
         Get ready to unlock the next level of features
       </p>
-      <div className="grid lg:grid-cols-4 gap-6 px-10">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 px-4 md:px-10">
         {features.map((feature, index) => (
           <div
             key={index}
-            className="bg-white shadow-md rounded-lg p-6 text-center 
-            flex flex-col justify-center items-center "
+            className="bg-white shadow-lg rounded-xl p-2 md:p-6 text-center 
+            flex flex-col justify-center items-center border border-black"
           >
             <img
               src={feature.img}
               alt={feature.title}
-              className="text-4xl mb-4 "
+              className=" text-xs md:text-4xl mb-2 md:mb-4 "
             />
-            <h3 className="text-lg font-bold">{feature.title}</h3>
+            <h3 className="md:text-lg font-bold">{feature.title}</h3>
             <p className="text-[#464657] mt-2">{feature.description}</p>
           </div>
         ))}

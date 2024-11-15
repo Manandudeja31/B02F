@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import img1 from "../assets/image 2.png";
 import img2 from "../assets/image 3.png";
 import img3 from "../assets/image 5.png";
@@ -15,6 +15,18 @@ import img13 from "../assets/image 15.png";
 import img14 from "../assets/image 16.png";
 
 const Services = () => {
+  const [stars, setStars] = useState(window.innerWidth < 1024);
+  useEffect(() => {
+    const handleResize = () => {
+      setStars(window.innerWidth < 1024);
+    };
+
+    // Add event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Clean up the event listener on component unmount
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   const services = [
     {
       title: "Assignment",
@@ -89,31 +101,38 @@ const Services = () => {
   ];
 
   return (
-    <div className=" py-12 flex bg-[#C414681A] shadow-md m-5 rounded-[5px] items-center justify-center flex-col">
-      <h2 className="text-4xl font-bold text-[#201041] ">Our Services</h2>
-      <p className="text-2xl font-medium text-gray-600 mb-8">
+    <div
+      className=" py-4 md:py-12 flex bg-[#C414681A] shadow-lg my-3 md:m-5 rounded-[10px] 
+      md:rounded-md items-center justify-center flex-col"
+    >
+      <h2 className="text-lg md:text-4xl font-bold text-[#201041] ">
+        Our Services
+      </h2>
+      <p className="text-base md:text-2xl font-medium mb-4 md:mb-8">
         We offer some fantastic services
       </p>
-      <div className="flex md:w-[1250px] flex-wrap gap-6 px-10 items-center justify-center">
+      <div
+        className="flex w-[360px] md:w-[1250px] flex-wrap gap-3 md:gap-6 md:px-10 
+      items-center justify-center"
+      >
         {services.map((service, index) => (
           <div
             key={index}
-            className="bg-white shadow-md w-[150px] h-[150px] md:w-[250px] md:h-[250px] rounded-2xl text-left"
+            className="bg-white shadow-md w-[110px] h-[150px] md:w-[250px] 
+            md:h-[250px] rounded md:rounded-2xl text-left"
           >
             <img
               src={service.img}
               alt={service.title}
-              className="text-4xl rounded-t-xl"
+              className="md:text-4xl rounded md:rounded-t-xl"
             />
             <div className="px-2">
-              <h3 className="text-xl font-medium text-gray-800">
-                {service.title}
-              </h3>
-              <div className="flex items-center">
-                <p className="text-gray-600 ">
-                  <span className="text-[#BA4396] size-12">★★★★★</span>(
-                  {service.reviews})
+              <h3 className="text-sm md:text-xl font-bold">{service.title}</h3>
+              <div className="text-gray-600 flex items gap-0 md:gap-5">
+                <p className="text-[#BA4396] size-12">
+                  {stars ? "★★★" : "★★★★★"}
                 </p>
+                ({service.reviews})
               </div>
             </div>
           </div>
