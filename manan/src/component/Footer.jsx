@@ -32,7 +32,7 @@ const Footer = () => {
             </a>
           </div>
           <div className="flex flex-col gap-5 pl-10">
-            <h3 className="text-4xl font-bold pb-5 pl-4">Features</h3>
+            <h3 className="text-4xl font-bold pb-5 pl-6">Features</h3>
             <a href="/" className="text-xl font-medium pl-5">
               Plagiarism Checker
             </a>

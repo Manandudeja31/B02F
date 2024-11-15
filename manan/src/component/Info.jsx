@@ -8,13 +8,13 @@ import { FaUser } from "react-icons/fa";
 const Info = () => {
   return (
     <div className="mb-5">
-      <div className="relative flex flex-col justify-center items-center m-2">
+      <div className="relative flex flex-col justify-center items-center m-3">
         <img
           src={object1}
           alt="obj1"
-          className="absolute left-0 top-[-12px] hidden md:block"
+          className="absolute left-0 top-[-15px] hidden md:block"
         />
-        <div className="border-2 md:w-[1200px]">
+        <div className="border-x-2 border-b-2 shadow-lg md:w-[1200px]">
           <p className=" md:text-5xl font-bold pb-3">
             700+ students saved, and counting
           </p>
@@ -51,7 +51,7 @@ const Info = () => {
         <img
           src={object2}
           alt="obj1"
-          className="absolute right-0 bottom-0 hidden md:block"
+          className="absolute right-[-10px] bottom-0 hidden md:block"
         />
       </div>
     </div>

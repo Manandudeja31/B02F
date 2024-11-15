@@ -15,7 +15,8 @@ const Questions = () => {
         {Question.map((Que, id) => (
           <div
             key={id}
-            className="bg-white md:w-[1050px] shadow-md rounded-lg py-2"
+            className="bg-white md:w-[1050px] shadow-md rounded-lg py-2 cursor-pointer"
+            onClick={() => showDescription(id)}
           >
             <div className="flex justify-between items-center px-3">
               <h3 className="text-xl font-bold">{Que.title}</h3>
@@ -37,7 +38,8 @@ const Questions = () => {
             <div
               className={`overflow-hidden transition-all duration-[2000ms] ease-in-out ${
                 isOpen === id ? "max-h-96" : "max-h-0"
-              }`}
+              }
+              `}
             >
               <div
                 className={`flex justify-center items-center flex-col gap-2 

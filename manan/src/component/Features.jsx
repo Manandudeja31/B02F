@@ -33,7 +33,7 @@ const Features = () => {
       <h2 className="text-4xl font-bold text-[#201041] mb-4">
         Awesome Features
       </h2>
-      <p className="text-2xl font-medium text-gray-600 mb-8">
+      <p className="text-2xl font-medium mb-8">
         Get ready to unlock the next level of features
       </p>
       <div className="grid lg:grid-cols-4 gap-6 px-10">
@@ -48,10 +48,8 @@ const Features = () => {
               alt={feature.title}
               className="text-4xl mb-4 "
             />
-            <h3 className="text-xl font-medium text-gray-800">
-              {feature.title}
-            </h3>
-            <p className="text-gray-600 mt-2">{feature.description}</p>
+            <h3 className="text-lg font-bold">{feature.title}</h3>
+            <p className="text-[#464657] mt-2">{feature.description}</p>
           </div>
         ))}
       </div>

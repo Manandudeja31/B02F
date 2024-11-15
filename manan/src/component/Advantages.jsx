@@ -44,14 +44,12 @@ const Advantages = () => {
         {Advantages.map((Advantage, index) => (
           <div
             key={index}
-            className="bg-white shadow-md rounded-[20px] p-6 text-center 
+            className=" bg-[#EE481447] shadow-md rounded-[20px] p-5 text-center 
                 flex flex-col justify-center items-center w-[250px]
-                 h-[250px] bg-[#EE481447] border-[1px] border-black"
+                 h-[250px] border border-black"
           >
-            <h3 className="text-xl font-bold text-gray-800">
-              {Advantage.title}
-            </h3>
-            <p className="text-gray-600 font-medium mt-2">
+            <h3 className="text-2xl font-bold">{Advantage.title}</h3>
+            <p className=" text-base font-medium mt-2">
               {Advantage.description}
             </p>
           </div>
